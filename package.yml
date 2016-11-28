@@ -1,0 +1,35 @@
+name       : mp3diags
+version    : 1.2.03
+release    : 1
+source     :
+    - http://vorboss.dl.sourceforge.net/project/mp3diags/mp3diags-src/MP3Diags-1.2.03.tar.gz : 8dce26781123150eb920acd1a1217601c55c8366f72b4cccd62bba53c3a73f53
+license    : GPL-2.0
+component  : multimedia.audio
+summary    : Finds problems in MP3 files and helps the user to fix many of them using included tools
+description: |
+    Finds problems in MP3 files and helps the user to fix many of them using included tools
+builddeps  :
+    - pkgconfig(QtCore)
+    - libboost-devel
+setup      : |
+    ./AdjustMt.sh
+    qmake-qt4 QMAKE_CFLAGS_RELEASE="%CFLAGS%" \
+              QMAKE_CXXFLAGS_RELEASE="%CXXFLAGS%" \
+              QMAKE_LFLAGS="%LDFLAGS%" \
+              QMAKE_MOC=moc-qt4 \
+              QMAKE_RCC=rcc-qt4 \
+              QMAKE_UIC=uic-qt4
+build      : |
+    %make
+    lrelease-qt4 src/translations/mp3diags_*.ts
+install    : |
+    install -m755 -D bin/MP3Diags $installdir/usr/bin/MP3Diags
+    install -m644 -D desktop/MP3Diags.desktop $installdir/usr/share/applications/MP3Diags.desktop
+
+    for i in 16 22 24 32 36 40 48; do
+        install -m644 -D desktop/MP3Diags${i}.png $installdir/usr/share/icons/hicolor/${i}x${i}/apps/MP3Diags.png
+    done
+
+    install -m755 -d $installdir/usr/share/mp3diags/translations
+    cp src/translations/*.qm $installdir/usr/share/mp3diags/translations
+    chmod 00644 -R $installdir/usr/share/mp3diags/translations

@@ -1,0 +1,43 @@
+<PISI>
+    <Source>
+        <Name>mp3diags</Name>
+        <Packager>
+            <Name>Bryan T. Meyers</Name>
+            <Email>bmeyers@datadrake.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <PartOf>multimedia.audio</PartOf>
+        <Summary xml:lang="en">Finds problems in MP3 files and helps the user to fix many of them using included tools</Summary>
+        <Description xml:lang="en">Finds problems in MP3 files and helps the user to fix many of them using included tools
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>mp3diags</Name>
+        <Summary xml:lang="en">Finds problems in MP3 files and helps the user to fix many of them using included tools</Summary>
+        <Description xml:lang="en">Finds problems in MP3 files and helps the user to fix many of them using included tools
+</Description>
+        <PartOf>multimedia.audio</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications/MP3Diags.desktop</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/MP3Diags.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/22x22/apps/MP3Diags.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/24x24/apps/MP3Diags.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/MP3Diags.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/36x36/apps/MP3Diags.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/40x40/apps/MP3Diags.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/MP3Diags.png</Path>
+            <Path fileType="data">/usr/share/mp3diags</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-11-28</Date>
+            <Version>1.2.03</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Bryan T. Meyers</Name>
+            <Email>bmeyers@datadrake.com</Email>
+        </Update>
+    </History>
+</PISI>
