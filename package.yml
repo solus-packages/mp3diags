@@ -1,11 +1,12 @@
 name       : mp3diags
 version    : 1.2.03
-release    : 1
+release    : 2
 source     :
     - http://vorboss.dl.sourceforge.net/project/mp3diags/mp3diags-src/MP3Diags-1.2.03.tar.gz : 8dce26781123150eb920acd1a1217601c55c8366f72b4cccd62bba53c3a73f53
 license    : GPL-2.0
 component  : multimedia.audio
-summary    : Finds problems in MP3 files and helps the user to fix many of them using included tools
+summary    : Finds problems in MP3 files and helps the user to fix many of them using
+    included tools
 description: |
     Finds problems in MP3 files and helps the user to fix many of them using included tools
 builddeps  :
@@ -22,7 +23,7 @@ setup      : |
 build      : |
     %make
     lrelease-qt4 src/translations/mp3diags_*.ts
-install    : |
+install    : |-
     install -m755 -D bin/MP3Diags $installdir/usr/bin/MP3Diags
     install -m644 -D desktop/MP3Diags.desktop $installdir/usr/share/applications/MP3Diags.desktop
 
