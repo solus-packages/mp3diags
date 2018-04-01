@@ -1,6 +1,6 @@
 name       : mp3diags
 version    : 1.2.03
-release    : 2
+release    : 3
 source     :
     - http://vorboss.dl.sourceforge.net/project/mp3diags/mp3diags-src/MP3Diags-1.2.03.tar.gz : 8dce26781123150eb920acd1a1217601c55c8366f72b4cccd62bba53c3a73f53
 license    : GPL-2.0
